@@ -3,12 +3,13 @@ package su.appoint.jm_education_project.models.organization.address;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import su.appoint.jm_education_project.models.organization.Organization;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "address")
+@Table
 @Getter
 @Setter
 @NoArgsConstructor
@@ -35,5 +36,8 @@ public class Address {
     private String phone;
 
     private LocalDateTime lastUpdate;
+
+    @OneToOne
+    private Organization organization;
 
 }

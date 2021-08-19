@@ -7,6 +7,7 @@ import su.appoint.jm_education_project.models.organization.address.Address;
 import su.appoint.jm_education_project.models.user.User;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -18,11 +19,13 @@ import javax.validation.constraints.NotNull;
 public class Organization {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "Organization_generator")
+    @SequenceGenerator(sequenceName = "Organization_sequence",
+            name = "Organization_generator", initialValue = 1000)
     private Long id;
 
-    @NotNull
-    @NotEmpty
+    @NotBlank
     private String title;
 
     @OneToOne(fetch = FetchType.LAZY)
