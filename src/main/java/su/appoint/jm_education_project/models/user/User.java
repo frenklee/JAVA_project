@@ -2,6 +2,8 @@ package su.appoint.jm_education_project.models.user;
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import su.appoint.jm_education_project.models.organization.booking.Studio;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -45,6 +47,9 @@ public class User  {
     }
 
     private Gender gender;
+
+    @ManyToOne
+    private Studio studio;
 
     public String getEmail() {
         return email;
@@ -129,10 +134,6 @@ public class User  {
     public String getLocaleTag() {
         return localeTag;
     }
-
-//    public void setLocaleTag(String localeTag) {
-//        this.localeTag = localeTag;
-//    }
 
     public Gender getGender() {
         return gender;
