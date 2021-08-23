@@ -5,10 +5,10 @@ import javax.validation.Payload;
 import java.lang.annotation.*;
 
 @Documented
-@Constraint(validatedBy = ContactNumberValidator.class)
+@Constraint(validatedBy = PhoneValidator.class)
 @Target( { ElementType.METHOD, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ContactNumberConstraint {
+public @interface Phone {
     String message() default "Invalid phone number";
 
     Class<?>[] groups() default {};
