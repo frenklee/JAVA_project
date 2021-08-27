@@ -1,6 +1,7 @@
 package su.appoint.jm_education_project.models.user;
 import lombok.*;
-import org.springframework.validation.annotation.Validated;
+
+import su.appoint.jm_education_project.constraints.Phone;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -25,6 +26,7 @@ public class User  {
     private Long id;
     @Email
     private String email;
+    @Phone
     private String phone;
     @NotBlank
     private String firstName;
