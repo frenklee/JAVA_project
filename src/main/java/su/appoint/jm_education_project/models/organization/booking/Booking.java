@@ -1,4 +1,4 @@
-package su.appoint.jm_education_project.models.organization;
+package su.appoint.jm_education_project.models.organization.booking;
 
 import lombok.Builder;
 import lombok.Getter;
