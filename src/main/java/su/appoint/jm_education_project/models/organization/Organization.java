@@ -11,7 +11,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "organization")
+@Table
 @NoArgsConstructor
 @Getter
 @Setter
@@ -30,7 +30,8 @@ public class Organization {
     @OneToOne(fetch = FetchType.LAZY)
     private User chief;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
     private Address address;
 
     @ManyToOne(fetch = FetchType.LAZY)
