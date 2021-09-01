@@ -1,18 +1,20 @@
 package su.appoint.jm_education_project.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import su.appoint.jm_education_project.dao.abstr.PaginationDao;
 import su.appoint.jm_education_project.dao.abstr.UserDao;
 import su.appoint.jm_education_project.models.user.User;
 import su.appoint.jm_education_project.service.abstr.PaginationService;
 import su.appoint.jm_education_project.service.abstr.UserService;
 
-import java.io.Serializable;
+@Service
+public class UserServiceImpl extends PaginationServiceImpl<Long, User> implements UserService {
 
-public class UserServiceImpl<K extends Serializable, T> extends PaginationServiceImpl<K, T> implements UserService<K, T> {
+    private final UserDao userDao;
 
-    private final UserDao<K, T> userDao;
-
-    protected UserServiceImpl(UserDao<K, T> userDao) {
+    @Autowired
+    protected UserServiceImpl(UserDao userDao) {
         super(userDao);
         this.userDao = userDao;
     }
