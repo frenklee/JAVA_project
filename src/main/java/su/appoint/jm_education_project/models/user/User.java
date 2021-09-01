@@ -34,11 +34,13 @@ public class User  {
     @NotNull
     private String password;
     private LocalDate dateOfBirth;
+    @Builder.Default
     private boolean is_enabled = true;
     @OneToOne(fetch = FetchType.EAGER)
     private Role roles;
     private LocalDateTime registrationDate;
     private String imageAvatar;
+    @Builder.Default
     private String localeTag = "ru" ;
     private Gender gender;
 }
