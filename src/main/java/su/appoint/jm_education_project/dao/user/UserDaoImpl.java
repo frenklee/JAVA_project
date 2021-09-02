@@ -1,10 +1,9 @@
-package su.appoint.jm_education_project.dao.impl;
+package su.appoint.jm_education_project.dao.user;
 
 import org.springframework.stereotype.Repository;
-import su.appoint.jm_education_project.dao.abstr.UserDao;
+import su.appoint.jm_education_project.dao.impl.PaginationDaoImpl;
+import su.appoint.jm_education_project.dao.user.UserDao;
 import su.appoint.jm_education_project.models.user.User;
-
-import java.io.Serializable;
 
 @Repository
 public class UserDaoImpl extends PaginationDaoImpl<Long, User> implements UserDao {
