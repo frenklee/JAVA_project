@@ -37,7 +37,7 @@ public class Address {
 
     private LocalDateTime lastUpdate;
 
-    @OneToOne
+    @OneToOne(mappedBy = "address")
     private Organization organization;
 
 }
