@@ -1,4 +1,4 @@
-package su.appoint.jm_education_project.dao.organization;
+package su.appoint.jm_education_project.dao.abstr.organization;
 
 import su.appoint.jm_education_project.dao.abstr.ReadWriteDao;
 import su.appoint.jm_education_project.models.organization.Organization;

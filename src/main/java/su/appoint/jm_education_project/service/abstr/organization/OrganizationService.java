@@ -1,4 +1,4 @@
-package su.appoint.jm_education_project.service.organization;
+package su.appoint.jm_education_project.service.abstr.organization;
 
 import su.appoint.jm_education_project.models.organization.Organization;
 import su.appoint.jm_education_project.service.abstr.ReadWriteService;

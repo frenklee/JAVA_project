@@ -1,9 +1,10 @@
-package su.appoint.jm_education_project.service.organization;
+package su.appoint.jm_education_project.service.impl.organization;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import su.appoint.jm_education_project.dao.organization.OrganizationDao;
+import su.appoint.jm_education_project.dao.abstr.organization.OrganizationDao;
 import su.appoint.jm_education_project.models.organization.Organization;
+import su.appoint.jm_education_project.service.abstr.organization.OrganizationService;
 import su.appoint.jm_education_project.service.impl.ReadWriteServiceImpl;
 
 @Service

@@ -1,6 +1,7 @@
-package su.appoint.jm_education_project.dao.organization;
+package su.appoint.jm_education_project.dao.impl.organization;
 
 import org.springframework.stereotype.Repository;
+import su.appoint.jm_education_project.dao.abstr.organization.OrganizationDao;
 import su.appoint.jm_education_project.dao.impl.ReadWriteDaoImpl;
 import su.appoint.jm_education_project.models.organization.Organization;
 
