@@ -27,11 +27,10 @@ public class Organization {
     @NotBlank
     private String title;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     private User chief;
 
-    @OneToOne(fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     private Address address;
 
     @ManyToOne(fetch = FetchType.LAZY)
