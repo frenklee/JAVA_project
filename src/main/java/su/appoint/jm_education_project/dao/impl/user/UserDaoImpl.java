@@ -1,8 +1,8 @@
-package su.appoint.jm_education_project.dao.user;
+package su.appoint.jm_education_project.dao.impl.user;
 
 import org.springframework.stereotype.Repository;
 import su.appoint.jm_education_project.dao.impl.PaginationDaoImpl;
-import su.appoint.jm_education_project.dao.user.UserDao;
+import su.appoint.jm_education_project.dao.abstr.user.UserDao;
 import su.appoint.jm_education_project.models.user.User;
 
 @Repository

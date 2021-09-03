@@ -1,11 +1,11 @@
-package su.appoint.jm_education_project.service.user;
+package su.appoint.jm_education_project.service.impl.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import su.appoint.jm_education_project.dao.user.UserDao;
+import su.appoint.jm_education_project.dao.abstr.user.UserDao;
 import su.appoint.jm_education_project.models.user.User;
+import su.appoint.jm_education_project.service.abstr.user.UserService;
 import su.appoint.jm_education_project.service.impl.PaginationServiceImpl;
-import su.appoint.jm_education_project.service.user.UserService;
 
 @Service
 public class UserServiceImpl extends PaginationServiceImpl<Long, User> implements UserService {
