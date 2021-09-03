@@ -4,15 +4,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import su.appoint.jm_education_project.models.organization.address.Address;
+import su.appoint.jm_education_project.models.organization.operating_mode.OrganizationMode;
 import su.appoint.jm_education_project.models.user.User;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "organization")
+@Table
 @NoArgsConstructor
 @Getter
 @Setter
@@ -31,7 +30,8 @@ public class Organization {
     @OneToOne(fetch = FetchType.LAZY)
     private User chief;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
     private Address address;
 
     @ManyToOne(fetch = FetchType.LAZY)
