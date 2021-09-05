@@ -1,5 +1,6 @@
 package su.appoint.jm_education_project.models.user;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,6 +11,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @NoArgsConstructor
+//@AllArgsConstructor
 @Table(name = "roles")
 
 public class Role {
@@ -19,5 +21,4 @@ public class Role {
     @SequenceGenerator(sequenceName = "Role_sequence", name = "Role_generator", initialValue = 10)
     Long id;
     String role;
-
 }

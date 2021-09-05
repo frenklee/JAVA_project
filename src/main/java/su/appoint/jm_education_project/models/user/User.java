@@ -2,6 +2,7 @@ package su.appoint.jm_education_project.models.user;
 import lombok.*;
 
 import su.appoint.jm_education_project.constraints.Phone;
+import su.appoint.jm_education_project.models.organization.booking.Studio;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -42,4 +43,7 @@ public class User  {
     @Builder.Default
     private String localeTag = "ru" ;
     private Gender gender;
+    @ManyToOne
+    private Studio studio;
+
 }

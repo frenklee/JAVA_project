@@ -15,7 +15,7 @@
 	<description>jm_education_project</description>
 	<properties>
 		<java.version>11</java.version>
-		<vaadin.version>14.6.8</vaadin.version>
+<!--		<vaadin.version>14.6.8</vaadin.version>-->
 	</properties>
 	<dependencies>
 
@@ -53,10 +53,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-spring-boot-starter</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.vaadin</groupId>-->
+<!--			<artifactId>vaadin-spring-boot-starter</artifactId>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.postgresql</groupId>
@@ -81,30 +81,30 @@
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>com.vaadin</groupId>
-				<artifactId>vaadin-bom</artifactId>
-				<version>${vaadin.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
+<!--			<dependency>-->
+<!--				<groupId>com.vaadin</groupId>-->
+<!--				<artifactId>vaadin-bom</artifactId>-->
+<!--				<version>${vaadin.version}</version>-->
+<!--				<type>pom</type>-->
+<!--				<scope>import</scope>-->
+<!--			</dependency>-->
 		</dependencies>
 	</dependencyManagement>
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.springframework.boot</groupId>-->
+<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--				<configuration>-->
+<!--					<excludes>-->
+<!--						<exclude>-->
+<!--							<groupId>org.projectlombok</groupId>-->
+<!--							<artifactId>lombok</artifactId>-->
+<!--						</exclude>-->
+<!--					</excludes>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
 		</plugins>
 	</build>
 
@@ -112,26 +112,26 @@
 		<profile>
 			<id>production</id>
 			<build>
-				<plugins>
-					<plugin>
-						<groupId>com.vaadin</groupId>
-						<artifactId>vaadin-maven-plugin</artifactId>
-						<version>${vaadin.version}</version>
-						<executions>
-							<execution>
-								<id>frontend</id>
-								<phase>compile</phase>
-								<goals>
-									<goal>prepare-frontend</goal>
-									<goal>build-frontend</goal>
-								</goals>
-								<configuration>
-									<productionMode>true</productionMode>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
+<!--				<plugins>-->
+<!--					<plugin>-->
+<!--						<groupId>com.vaadin</groupId>-->
+<!--						<artifactId>vaadin-maven-plugin</artifactId>-->
+<!--						<version>${vaadin.version}</version>-->
+<!--						<executions>-->
+<!--							<execution>-->
+<!--								<id>frontend</id>-->
+<!--								<phase>compile</phase>-->
+<!--								<goals>-->
+<!--									<goal>prepare-frontend</goal>-->
+<!--									<goal>build-frontend</goal>-->
+<!--								</goals>-->
+<!--								<configuration>-->
+<!--									<productionMode>true</productionMode>-->
+<!--								</configuration>-->
+<!--							</execution>-->
+<!--						</executions>-->
+<!--					</plugin>-->
+<!--				</plugins>-->
 			</build>
 		</profile>
 	</profiles>
