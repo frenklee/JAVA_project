@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import su.appoint.jm_education_project.models.organization.Organization;
 import su.appoint.jm_education_project.models.user.User;
-
 import javax.persistence.*;
 
 @Entity
@@ -28,5 +27,5 @@ public class OrganizationClients {
 
     Integer discount;
 
-    Integer number_of_card;
+    Integer numberOfCard;
 }

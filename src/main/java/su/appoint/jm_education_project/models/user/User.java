@@ -34,7 +34,7 @@ public class User  {
     private String password;
     private LocalDate dateOfBirth;
     @Builder.Default
-    private boolean is_enabled = true;
+    private boolean isEnabled = true;
     @OneToOne(fetch = FetchType.EAGER)
     private Role roles;
     private LocalDateTime registrationDate;
