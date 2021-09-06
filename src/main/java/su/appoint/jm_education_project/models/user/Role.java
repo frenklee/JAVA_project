@@ -21,4 +21,5 @@ public class Role {
     @SequenceGenerator(sequenceName = "Role_sequence", name = "Role_generator", initialValue = 10)
     Long id;
     String role;
+
 }

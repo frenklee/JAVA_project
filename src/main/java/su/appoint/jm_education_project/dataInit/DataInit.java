@@ -1,4 +1,4 @@
-package su.appoint.jm_education_project.savemodels;
+package su.appoint.jm_education_project.dataInit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.stereotype.Component;
@@ -14,12 +14,12 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Component
-public class UserDataInit {
+public class DataInit {
 
     private RoleService roleService;
     private UserServiceImpl userService;
     @Autowired
-    public UserDataInit(RoleService roleService, UserServiceImpl userService) {
+    public DataInit(RoleService roleService, UserServiceImpl userService) {
         this.roleService = roleService;
         this.userService = userService;
     }
@@ -45,286 +45,286 @@ public class UserDataInit {
         client.setRole("CLIENT");
         roleService.persist(client);
 //superAdmin
-        User userSuperAdmin = User.builder()
-                .email("Lena@mail.ru")
+        User superAdmin0 = User.builder()
+                .email("superAdmin@mail.ru")
                 .dateOfBirth(LocalDate.of(2000,2,3))
                 .phone("722-222-365")
                 .gender(Gender.FEMALE)
-                .firstName("Lena")
-                .lastName("Kozlova")
-                .password("11111")
+                .firstName("superAdmin")
+                .lastName("superAdmin")
+                .password("superAdmin")
                 .registrationDate(LocalDateTime.now())
                 .roles(superAdmin)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userSuperAdmin);
+        userService.persist(superAdmin0);
 
-        User userSuperAdmin1 = User.builder()
-                .email("Oleg@mail.ru")
+        User superAdmin1 = User.builder()
+                .email("superAdmin1@mail.ru")
                 .dateOfBirth(LocalDate.of(1998,10,4))
                 .phone("722-333-365")
                 .gender(Gender.MALE)
-                .firstName("Oleg")
-                .lastName("Piminov")
-                .password("123456789")
+                .firstName("superAdmin1")
+                .lastName("superAdmin1")
+                .password("superAdmin")
                 .registrationDate(LocalDateTime.now())
                 .roles(superAdmin)
                 .imageAvatar("add")
                 .build();
-        userService.persist(userSuperAdmin1);
+        userService.persist(superAdmin1);
 
-        User userSuperAdmin2 = User.builder()
-                .email("Masha@mail.ru")
+        User superAdmin2 = User.builder()
+                .email("superAdmin2@mail.ru")
                 .dateOfBirth(LocalDate.of(1987,2,10))
                 .phone("722-222-333")
                 .gender(Gender.FEMALE)
-                .firstName("Masha")
-                .lastName("Sidorova")
-                .password("101010101")
+                .firstName("superAdmin2")
+                .lastName("superAdmin2")
+                .password("superAdmin")
                 .registrationDate(LocalDateTime.now())
                 .roles(superAdmin)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userSuperAdmin2);
+        userService.persist(superAdmin2);
 
-        User userSuperAdmin3 = User.builder()
-                .email("Vera@mail.ru")
+        User superAdmin3 = User.builder()
+                .email("superAdmin3@mail.ru")
                 .dateOfBirth(LocalDate.of(2001,12,3))
                 .phone("121-222-365")
                 .gender(Gender.FEMALE)
-                .firstName("Vera")
-                .lastName("Solina")
-                .password("11111")
+                .firstName("superAdmin3")
+                .lastName("superAdmin3")
+                .password("superAdmin")
                 .registrationDate(LocalDateTime.now())
                 .roles(superAdmin)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userSuperAdmin3);
+        userService.persist(superAdmin3);
 
-        User userSuperAdmin4 = User.builder()
-                .email("Vasiliy@mail.ru")
+        User superAdmin4 = User.builder()
+                .email("superAdmin4@mail.ru")
                 .dateOfBirth(LocalDate.of(1977,4,3))
                 .phone("100-222-365")
                 .gender(Gender.MALE)
-                .firstName("Vasiliy")
-                .lastName("Kozin")
-                .password("54321")
+                .firstName("superAdmin4")
+                .lastName("superAdmin4")
+                .password("superAdmin")
                 .registrationDate(LocalDateTime.now())
                 .roles(superAdmin)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userSuperAdmin4);
+        userService.persist(superAdmin4);
         //chief
-        User userChief = User.builder()
-                .email("Victor@mail.ru")
+        User chief0 = User.builder()
+                .email("chief@mail.ru")
                 .dateOfBirth(LocalDate.of(1980,6,3))
                 .phone("100-222-232")
                 .gender(Gender.MALE)
-                .firstName("Victor")
-                .lastName("Peshta")
-                .password("54321")
+                .firstName("chief")
+                .lastName("chief")
+                .password("chief")
                 .registrationDate(LocalDateTime.now())
                 .roles(chief)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userChief);
+        userService.persist(chief0);
 
-        User userChief1 = User.builder()
-                .email("Anatoliy@mail.ru")
+        User chief1 = User.builder()
+                .email("chief1@mail.ru")
                 .dateOfBirth(LocalDate.of(1984,2,3))
                 .phone("100-222-090")
                 .gender(Gender.MALE)
-                .firstName("Anatoly")
-                .lastName("Sivin")
-                .password("54321")
+                .firstName("chief1")
+                .lastName("chief1")
+                .password("chief")
                 .registrationDate(LocalDateTime.now())
                 .roles(chief)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userChief1);
+        userService.persist(chief1);
 
-        User userChief2 = User.builder()
-                .email("Grisha@mail.ru")
+        User chief2 = User.builder()
+                .email("chief2@mail.ru")
                 .dateOfBirth(LocalDate.of(1980,4,4))
                 .phone("100-222-424")
                 .gender(Gender.MALE)
-                .firstName("Grigoriy")
-                .lastName("Orlov")
-                .password("54321")
+                .firstName("chief2")
+                .lastName("chief2")
+                .password("chief")
                 .registrationDate(LocalDateTime.now())
                 .roles(chief)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userChief2);
+        userService.persist(chief2);
 
-        User userChief3 = User.builder()
-                .email("Iliya@mail.ru")
+        User chief3 = User.builder()
+                .email("chief3@mail.ru")
                 .dateOfBirth(LocalDate.of(1988,1,1))
                 .phone("100-222-321")
                 .gender(Gender.MALE)
-                .firstName("Ilya")
-                .lastName("Limonov")
-                .password("54321")
+                .firstName("chief3")
+                .lastName("chief3")
+                .password("chief")
                 .registrationDate(LocalDateTime.now())
                 .roles(chief)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userChief3);
+        userService.persist(chief3);
 
-        User userChief4 = User.builder()
-                .email("Den@mail.ru")
+        User chief4 = User.builder()
+                .email("chief4@mail.ru")
                 .dateOfBirth(LocalDate.of(1985,5,5))
                 .phone("100-222-555")
                 .gender(Gender.MALE)
-                .firstName("Denis")
-                .lastName("Mozin")
-                .password("54321")
+                .firstName("chief4")
+                .lastName("chief4")
+                .password("chief")
                 .registrationDate(LocalDateTime.now())
                 .roles(chief)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userChief4);
+        userService.persist(chief4);
 //  administrator
-        User userAdministrator = User.builder()
-                .email("Stanislava@mail.ru")
+        User administrator0 = User.builder()
+                .email("administrator@mail.ru")
                 .dateOfBirth(LocalDate.of(2002,7,5))
                 .phone("100-888-555")
                 .gender(Gender.FEMALE)
-                .firstName("Stanislva")
-                .lastName("Olenich")
-                .password("0000")
+                .firstName("administrator")
+                .lastName("administrator")
+                .password("administrator")
                 .registrationDate(LocalDateTime.now())
                 .roles(administrator)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userAdministrator);
+        userService.persist(administrator0);
 
-        User userAdministrator1 = User.builder()
-                .email("Margo@mail.ru")
+        User administrator1 = User.builder()
+                .email("administrator1@mail.ru")
                 .dateOfBirth(LocalDate.of(2002,7,5))
                 .phone("100-191-555")
                 .gender(Gender.FEMALE)
-                .firstName("Margoritta")
-                .lastName("Petrova")
-                .password("0000")
+                .firstName("administrator1")
+                .lastName("administrator1")
+                .password("administrator")
                 .registrationDate(LocalDateTime.now())
                 .roles(administrator)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userAdministrator1);
+        userService.persist(administrator1);
 
-        User userAdministrator2 = User.builder()
-                .email("Vasy@mail.ru")
+        User administrator2 = User.builder()
+                .email("administrator2@mail.ru")
                 .dateOfBirth(LocalDate.of(2002,7,5))
                 .phone("100-154-555")
                 .gender(Gender.FEMALE)
-                .firstName("Vasilisa")
-                .lastName("Pekina")
-                .password("0000")
+                .firstName("administrator2")
+                .lastName("administrator2")
+                .password("administrator")
                 .registrationDate(LocalDateTime.now())
                 .roles(administrator)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userAdministrator2);
+        userService.persist(administrator2);
 
-        User userAdministrator3 = User.builder()
-                .email("Valeriya@mail.ru")
+        User administrator3 = User.builder()
+                .email("administrator3@mail.ru")
                 .dateOfBirth(LocalDate.of(2002,7,5))
                 .phone("100-147-555")
                 .gender(Gender.FEMALE)
-                .firstName("Valeriya")
-                .lastName("Smakintoz")
-                .password("0000")
+                .firstName("administrator3")
+                .lastName("administrator3")
+                .password("administrator")
                 .registrationDate(LocalDateTime.now())
                 .roles(administrator)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userAdministrator3);
+        userService.persist(administrator3);
 
-        User userAdministrator4 = User.builder()
-                .email("Olga@mail.ru")
+        User administrator4 = User.builder()
+                .email("administrator4@mail.ru")
                 .dateOfBirth(LocalDate.of(2002,7,5))
                 .phone("100-987-555")
                 .gender(Gender.FEMALE)
-                .firstName("Olga")
-                .lastName("Lazareva")
-                .password("0000")
+                .firstName("administrator4")
+                .lastName("administrator4")
+                .password("administrator")
                 .registrationDate(LocalDateTime.now())
                 .roles(administrator)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userAdministrator4);
+        userService.persist(administrator4);
 //client
 
-        User userClient = User.builder()
-                .email("Max@mail.ru")
+        User client0 = User.builder()
+                .email("client@mail.ru")
                 .dateOfBirth(LocalDate.of(1990,6,8))
                 .phone("159-987-555")
                 .gender(Gender.MALE)
-                .firstName("Maxx")
-                .lastName("Hellowey")
-                .password("13579")
+                .firstName("client")
+                .lastName("client")
+                .password("client")
                 .registrationDate(LocalDateTime.now())
                 .roles(client)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userClient);
+        userService.persist(client0);
 
-        User userClient1 = User.builder()
-                .email("Stipe@mail.ru")
+        User client1 = User.builder()
+                .email("client1@mail.ru")
                 .dateOfBirth(LocalDate.of(1988,7,8))
                 .phone("154-987-555")
                 .gender(Gender.MALE)
-                .firstName("Stipe")
-                .lastName("Miochoch")
-                .password("13579")
+                .firstName("client1")
+                .lastName("client1")
+                .password("client")
                 .registrationDate(LocalDateTime.now())
                 .roles(client)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userClient1);
+        userService.persist(client1);
 
-        User userClient2 = User.builder()
-                .email("Brock@mail.ru")
+        User client2 = User.builder()
+                .email("client2@mail.ru")
                 .dateOfBirth(LocalDate.of(1990,6,8))
                 .phone("999-987-555")
                 .gender(Gender.MALE)
-                .firstName("Brock")
-                .lastName("Lesnar")
-                .password("13579")
+                .firstName("client2")
+                .lastName("client2")
+                .password("client")
                 .registrationDate(LocalDateTime.now())
                 .roles(client)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userClient2);
+        userService.persist(client2);
 
-        User userClient3 = User.builder()
-                .email("Kain@mail.ru")
+        User client3 = User.builder()
+                .email("client3@mail.ru")
                 .dateOfBirth(LocalDate.of(1990,6,8))
                 .phone("200-987-555")
                 .gender(Gender.MALE)
-                .firstName("Kain")
-                .lastName("Velaskes")
-                .password("13579")
+                .firstName("client3")
+                .lastName("client3")
+                .password("client")
                 .registrationDate(LocalDateTime.now())
                 .roles(client)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userClient3);
+        userService.persist(client3);
 
-        User userClient4 = User.builder()
-                .email("Stephan@mail.ru")
+        User client4 = User.builder()
+                .email("client4@mail.ru")
                 .dateOfBirth(LocalDate.of(1990,6,8))
                 .phone("985-987-555")
                 .gender(Gender.MALE)
-                .firstName("Stephan")
-                .lastName("Shtruve")
-                .password("13579")
+                .firstName("client4")
+                .lastName("client4")
+                .password("client")
                 .registrationDate(LocalDateTime.now())
                 .roles(client)
                 .imageAvatar("ererer")
                 .build();
-        userService.persist(userClient4);
+        userService.persist(client4);
 
     }
 }
