@@ -7,6 +7,8 @@ import su.appoint.jm_education_project.models.organization.staff.Staff;
 import su.appoint.jm_education_project.service.abstr.organization.staff.StaffService;
 import su.appoint.jm_education_project.service.impl.ReadWriteServiceImpl;
 
+import java.util.List;
+
 @Service
 public class StaffServiceImpl extends ReadWriteServiceImpl<Long, Staff> implements StaffService {
 
@@ -16,5 +18,15 @@ public class StaffServiceImpl extends ReadWriteServiceImpl<Long, Staff> implemen
     protected StaffServiceImpl(StaffDao staffDao) {
         super(staffDao);
         this.staffDao = staffDao;
+    }
+
+    @Override
+    public List<Staff> getByOrganizationId(Long organizationId) {
+        return staffDao.getByOrganizationId(organizationId);
+    }
+
+    @Override
+    public Staff getByPositionAndOrganizationId(String employeePosition,Long organizationId) {
+        return staffDao.getByPositionAndOrganizationId(employeePosition,organizationId);
     }
 }
