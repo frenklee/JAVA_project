@@ -32,4 +32,5 @@ public class UserServiceImpl extends PaginationServiceImpl<Long, User> implement
     public String getEmailByUserId(Long studentId) {
         return userDao.getEmailByUserId(studentId);
     }
+
 }

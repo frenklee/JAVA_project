@@ -1,9 +1,8 @@
 package su.appoint.jm_education_project.models.user;
-import lombok.*;
 
+import lombok.*;
 import su.appoint.jm_education_project.constraints.Phone;
 import su.appoint.jm_education_project.models.organization.booking.Studio;
-
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -27,6 +26,7 @@ public class User  {
     @Email
     private String email;
     @Phone
+    @Column(unique=true)
     private String phone;
     @NotBlank
     private String firstName;

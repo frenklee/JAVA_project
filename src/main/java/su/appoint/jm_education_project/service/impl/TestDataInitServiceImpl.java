@@ -23,11 +23,11 @@ public class TestDataInitServiceImpl {
     }
 
     @Transactional
-    public void init(){
+    public void init() {
         initData();
     }
 
-    private void initData() {
+    private void initData(){
         addRoleAndUser();
 
     }
