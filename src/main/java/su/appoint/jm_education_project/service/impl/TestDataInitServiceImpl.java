@@ -64,6 +64,50 @@ public class TestDataInitServiceImpl {
                     .build();
             userService.persist(user);
         }
-
+        for (int i = 0; i < 10; i++) {
+            User user = User.builder()
+                    .email("chief" + i + "@mail.ru")
+                    .dateOfBirth(LocalDate.of(1988,5,i+1))
+                    .phone("+7-123-45-1" + i)
+                    .gender(Gender.FEMALE)
+                    .firstName("chief" + i)
+                    .lastName("chief" + i)
+                    .password("chief")
+                    .registrationDate(LocalDateTime.now())
+                    .roles(chief)
+                    .imageAvatar("-")
+                    .build();
+            userService.persist(user);
+        }
+        for (int i = 0; i < 10; i++) {
+            User user = User.builder()
+                    .email("administrator" + i + "@mail.ru")
+                    .dateOfBirth(LocalDate.of(1980,4,i+1))
+                    .phone("+7-123-45-2" + i)
+                    .gender(Gender.FEMALE)
+                    .firstName("administrator" + i)
+                    .lastName("administrator" + i)
+                    .password("administrator")
+                    .registrationDate(LocalDateTime.now())
+                    .roles(administrator)
+                    .imageAvatar("-")
+                    .build();
+            userService.persist(user);
+        }
+        for (int i = 0; i < 10; i++) {
+            User user = User.builder()
+                    .email("client" + i + "@mail.ru")
+                    .dateOfBirth(LocalDate.of(1981,4,i+1))
+                    .phone("+7-123-45-3" + i)
+                    .gender(Gender.MALE)
+                    .firstName("client" + i)
+                    .lastName("client" + i)
+                    .password("client")
+                    .registrationDate(LocalDateTime.now())
+                    .roles(client)
+                    .imageAvatar("-")
+                    .build();
+            userService.persist(user);
+        }
     }
 }

@@ -11,5 +11,6 @@ public class JmEducationProjectApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JmEducationProjectApplication.class, args);
 	}
-
 }
+
+
