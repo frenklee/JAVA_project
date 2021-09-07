@@ -32,9 +32,6 @@ public class TestDataInitServiceImpl {
 
     }
 
-    private void addUser() {
-    }
-
     private void addRoleAndUser() {
         Role superAdmin = new Role();
         superAdmin.setRole("SUPER_ADMIN");
@@ -51,7 +48,6 @@ public class TestDataInitServiceImpl {
         Role client = new Role();
         client.setRole("CLIENT");
         roleService.persist(client);
-
 
         for (int i = 0; i < 10; i++) {
             User user = User.builder()
