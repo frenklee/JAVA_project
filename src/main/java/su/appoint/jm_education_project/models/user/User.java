@@ -1,6 +1,7 @@
 package su.appoint.jm_education_project.models.user;
 
 import lombok.*;
+import org.hibernate.annotations.NaturalId;
 import su.appoint.jm_education_project.constraints.Phone;
 import su.appoint.jm_education_project.models.organization.booking.Studio;
 import javax.persistence.*;

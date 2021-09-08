@@ -20,10 +20,10 @@ import java.util.Collection;
 public abstract class ReadWriteDaoImpl<K extends Serializable, T> extends ReadOnlyDaoImpl<K, T> {
 
     @Transactional(propagation = Propagation.MANDATORY)
-    public void persist(T entity) {
+    public void persist(T entity)  {
         try {
             entityManager.persist(entity);
-        } catch (HibernateException e) {
+        } catch (HibernateException e ) {
             throw new PersistException("Failed to add an object", e);
         }
     }
