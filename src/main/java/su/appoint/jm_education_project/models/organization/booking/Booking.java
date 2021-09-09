@@ -6,12 +6,11 @@ import su.appoint.jm_education_project.models.organization.staff.Staff;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
 @Table(name = "booking")
 public class Booking {
