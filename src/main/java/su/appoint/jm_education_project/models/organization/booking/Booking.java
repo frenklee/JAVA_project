@@ -3,9 +3,9 @@ package su.appoint.jm_education_project.models.organization.booking;
 import lombok.*;
 import su.appoint.jm_education_project.models.organization.clients.OrganizationClients;
 import su.appoint.jm_education_project.models.organization.staff.Staff;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Setter

@@ -4,8 +4,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import su.appoint.jm_education_project.models.organization.Organization;
-import su.appoint.jm_education_project.models.user.User;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 

@@ -1,4 +1,5 @@
 package su.appoint.jm_education_project.service.impl.city;
+
 import org.springframework.stereotype.Service;
 import su.appoint.jm_education_project.dao.abstr.city.CityDao;
 import su.appoint.jm_education_project.models.organization.address.City;
@@ -7,7 +8,6 @@ import su.appoint.jm_education_project.service.impl.ReadWriteServiceImpl;
 
 @Service
 public class CityServiceImpl extends ReadWriteServiceImpl<Long, City> implements CityService {
-
 
     private  final CityDao cityDao;
 
