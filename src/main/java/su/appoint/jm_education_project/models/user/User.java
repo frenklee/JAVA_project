@@ -2,6 +2,7 @@ package su.appoint.jm_education_project.models.user;
 import lombok.*;
 
 import su.appoint.jm_education_project.constraints.Phone;
+import su.appoint.jm_education_project.models.organization.booking.Studio;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -21,7 +22,7 @@ import java.time.LocalDateTime;
 public class User  {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "User_generator")
-    @SequenceGenerator(sequenceName = "User_sequence", name = "User_generator", initialValue = 1000)
+    @SequenceGenerator(sequenceName = "User_sequence", name = "User_generator")
     private Long id;
     @Email
     private String email;
@@ -42,4 +43,7 @@ public class User  {
     @Builder.Default
     private String localeTag = "ru" ;
     private Gender gender;
+    @ManyToOne
+    private Studio studio;
+
 }
