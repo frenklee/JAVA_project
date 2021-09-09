@@ -14,7 +14,7 @@ public class StaffDaoImpl extends ReadWriteDaoImpl<Long, Staff> implements Staff
     public List<Staff> getByOrganizationId(Long organizationId) {
 
         return entityManager
-                .createQuery("SELECT staff FROM Staff staff where staff.organization_id.id =: id", Staff.class)
+                .createQuery("SELECT staff FROM Staff staff where staff.organization.id =: id", Staff.class)
                 .setParameter("id", organizationId)
                 .getResultList();
     }
@@ -23,8 +23,8 @@ public class StaffDaoImpl extends ReadWriteDaoImpl<Long, Staff> implements Staff
     public Staff getByPositionAndOrganizationId(String employeePosition,Long organizationId) {
         return entityManager
                 .createQuery("SELECT staff FROM Staff staff " +
-                        "WHERE staff.employee_position =: employeePosition " +
-                        "AND staff.organization_id.id =: organizationId", persistentClass)
+                        "WHERE staff.employeePosition =: employeePosition " +
+                        "AND staff.organization.id =: organizationId", persistentClass)
                 .setParameter("employeePosition", employeePosition)
                 .setParameter("organizationId",organizationId)
                 .getSingleResult();
