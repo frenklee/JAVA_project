@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import su.appoint.jm_education_project.models.organization.Organization;
 import su.appoint.jm_education_project.models.user.User;
-
 import javax.persistence.*;
 
 @Entity
@@ -18,10 +17,10 @@ public class Staff {
     Long id;
 
     @OneToOne(fetch = FetchType.EAGER)
-    Organization organization_id;
+    Organization organization;
 
     @OneToOne(fetch = FetchType.EAGER)
-    private User employee_id;
+    private User employee;
 
-    private String employee_position;
+    private String employeePosition;
 }

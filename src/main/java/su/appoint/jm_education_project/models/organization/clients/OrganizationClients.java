@@ -27,5 +27,5 @@ public class OrganizationClients {
 
     Integer discount;
 
-    Integer number_of_card;
+    Integer numberOfCard;
 }
