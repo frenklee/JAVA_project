@@ -2,7 +2,6 @@ package su.appoint.jm_education_project.constraints;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 

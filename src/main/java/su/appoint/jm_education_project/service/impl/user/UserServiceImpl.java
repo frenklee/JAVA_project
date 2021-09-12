@@ -28,8 +28,5 @@ public class UserServiceImpl extends PaginationServiceImpl<Long, User> implement
         return userDao.getUserByEmail(email);
     }
 
-    @Override
-    public String getEmailByUserId(Long studentId) {
-        return userDao.getEmailByUserId(studentId);
-    }
+
 }

@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import su.appoint.jm_education_project.models.organization.Organization;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -37,7 +36,8 @@ public class Address {
 
     private LocalDateTime lastUpdate;
 
-    @OneToOne(mappedBy = "address")
+    @OneToOne
     private Organization organization;
+
 
 }

@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 import su.appoint.jm_education_project.dao.abstr.role.RoleDao;
 import su.appoint.jm_education_project.dao.impl.ReadWriteDaoImpl;
 import su.appoint.jm_education_project.models.user.Role;
+
 @Repository
 public class RoleDaoImpl extends  ReadWriteDaoImpl <Long,Role >implements RoleDao {
 

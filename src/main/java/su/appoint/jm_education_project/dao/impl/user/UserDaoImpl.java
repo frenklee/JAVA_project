@@ -27,7 +27,7 @@ public class UserDaoImpl extends PaginationDaoImpl<Long, User> implements UserDa
     }
 
     @Override
-    public String getEmailByUserId(Long studentId) {
+    public String getEmailByUserId(Long studentId)  {
         return entityManager.createQuery("SELECT e.email FROM User e WHERE e.id =: id", String.class)
                 .setParameter("id", studentId)
                 .getSingleResult();

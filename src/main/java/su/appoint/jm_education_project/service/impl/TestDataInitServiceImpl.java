@@ -23,16 +23,16 @@ public class TestDataInitServiceImpl {
     }
 
     @Transactional
-    public void init(){
+    public void init() {
         initData();
     }
 
     private void initData() {
         addRoleAndUser();
-
     }
 
     private void addRoleAndUser() {
+
         Role superAdmin = new Role();
         superAdmin.setRole("SUPER_ADMIN");
         roleService.persist(superAdmin);
@@ -49,10 +49,11 @@ public class TestDataInitServiceImpl {
         client.setRole("CLIENT");
         roleService.persist(client);
 
+
         for (int i = 0; i < 10; i++) {
             User user = User.builder()
                     .email("superAdmin" + i + "@mail.ru")
-                    .dateOfBirth(LocalDate.of(1977,4,i+1))
+                    .dateOfBirth(LocalDate.of(1977, 4, i + 1))
                     .phone("+7-123-45-0" + i)
                     .gender(Gender.MALE)
                     .firstName("superAdmin" + i)
@@ -63,11 +64,13 @@ public class TestDataInitServiceImpl {
                     .imageAvatar("-")
                     .build();
             userService.persist(user);
+
         }
+
         for (int i = 0; i < 10; i++) {
             User user = User.builder()
                     .email("chief" + i + "@mail.ru")
-                    .dateOfBirth(LocalDate.of(1988,5,i+1))
+                    .dateOfBirth(LocalDate.of(1988, 5, i + 1))
                     .phone("+7-123-45-1" + i)
                     .gender(Gender.FEMALE)
                     .firstName("chief" + i)
@@ -77,12 +80,14 @@ public class TestDataInitServiceImpl {
                     .roles(chief)
                     .imageAvatar("-")
                     .build();
+
             userService.persist(user);
+
         }
         for (int i = 0; i < 10; i++) {
             User user = User.builder()
                     .email("administrator" + i + "@mail.ru")
-                    .dateOfBirth(LocalDate.of(1980,4,i+1))
+                    .dateOfBirth(LocalDate.of(1980, 4, i + 1))
                     .phone("+7-123-45-2" + i)
                     .gender(Gender.FEMALE)
                     .firstName("administrator" + i)
@@ -97,7 +102,7 @@ public class TestDataInitServiceImpl {
         for (int i = 0; i < 10; i++) {
             User user = User.builder()
                     .email("client" + i + "@mail.ru")
-                    .dateOfBirth(LocalDate.of(1981,4,i+1))
+                    .dateOfBirth(LocalDate.of(1981, 4, i + 1))
                     .phone("+7-123-45-3" + i)
                     .gender(Gender.MALE)
                     .firstName("client" + i)
