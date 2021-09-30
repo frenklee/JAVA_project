@@ -5,12 +5,11 @@ import su.appoint.jm_education_project.models.Page;
 import su.appoint.jm_education_project.service.abstr.PaginationService;
 
 import java.io.Serializable;
-import java.util.Map;
+import java.util.*;
 
 public abstract class PaginationServiceImpl<K extends Serializable, T> extends ReadWriteServiceImpl<K, T> implements PaginationService<K, T> {
 
     private final PaginationDao<K, T> paginationDao;
-
     protected PaginationServiceImpl(PaginationDao<K, T> paginationDao) {
         super(paginationDao);
         this.paginationDao = paginationDao;
